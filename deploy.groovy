@@ -10,7 +10,7 @@ git branch: 'master',
 url:'https://github.com/michalnagosa2/flask-http.git'
 }
 stage('Build image') {
-customImage =docker.build registry
+customImage = docker.build("jenkins/opsschool-jenkins-test-01:tag")
 }
 stage("Push image") {
 docker.withRegistry('https://registry-1.docker.io/v1', 'docker.michal,nagosa96') {
